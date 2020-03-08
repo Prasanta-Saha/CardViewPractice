@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#E91E63"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        app:cardMaxElevation="30dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:id="@+id/parentVertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/titleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#CDDC39"
+                    android:onClick="mm"
+                    android:tag="NAME TAG"
+                    android:text="NAME"
+                    android:textAlignment="center"
+                    android:textColor="#E91E63"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/textView_dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#CDDC39"
+                    android:onClick="mm"
+                    android:tag="DOB TAG"
+                    android:text="DOB"
+                    android:textAlignment="center"
+                    android:textColor="#E91E63"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/imageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:scaleType="center"
+                    android:tag="IMAGE TAG"
+                    android:onClick="mm"
+                    app:srcCompat="@drawable/harakrishna16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/likebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#FFEB3B"
+                    android:onClick="mm"
+                    android:tag="LIKE BUTTON"
+                    android:text="LIKE"
+                    android:textColor="#E91E63"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/commentbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#FFEB3B"
+                    android:onClick="mm"
+                    android:tag="COMMENT BUTTON"
+                    android:text="COMMENT"
+                    android:textColor="#E91E63"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/sharebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#FFEB3B"
+                    android:onClick="mm"
+                    android:tag="SHARE BUTTON"
+                    android:text="SHARE"
+                    android:textColor="#E91E63"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
